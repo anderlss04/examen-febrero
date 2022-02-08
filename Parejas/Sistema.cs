@@ -5,19 +5,26 @@ namespace Parejas
 {
     public class Sistema
     {
-
         public List<Persona> Personas { get; } = new()
         {
             new Persona("Luis", Sexo.H, 23),
             new Persona("Marta", Sexo.M, 20),
             new Persona("Pedro", Sexo.H, 21),
-            new Persona("María", Sexo.M, 27),
+            new Persona("María", Sexo.M, 35),
+            new Persona("Hombre1", Sexo.H, 45),
+            new Persona("María2", Sexo.M, 49),
+            new Persona("Hombre2", Sexo.H, 59),
+            new Persona("María3", Sexo.M, 61),
+            new Persona("Hombre3", Sexo.H, 53),
+            new Persona("María4", Sexo.M, 43),
+            new Persona("Hombre4", Sexo.H, 19),
         };
 
         public bool AdmitenDescendencia(Persona a, Persona b)
         {
             if (a.Sexo == b.Sexo) return false;
-            if (System.Math.Abs(a.Edad - b.Edad) > 5) return false;
+            if (System.Math.Abs(a.Edad - b.Edad) > 12) return false;
+            if (System.Math.Abs(a.Rango - b.Rango) > 1) return false;
             return true;
         }
 

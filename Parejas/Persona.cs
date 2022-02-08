@@ -1,8 +1,14 @@
 namespace Parejas
 {
-    public enum Sexo{
+    public enum Sexo
+    {
         H,
         M
+    }
+    public enum RangoDeEdad
+    {
+        MuyJoven, Joven, Plenitud,
+        Madurez, Vejez
     }
 
     public class Persona
@@ -11,12 +17,26 @@ namespace Parejas
         public int Edad { get; set; }
         public Sexo Sexo { get; set; }
 
-        public Persona (string nombre, Sexo sexo, int edad){
+        public Persona(string nombre, Sexo sexo, int edad)
+        {
             Nombre = nombre;
             Sexo = sexo;
             Edad = edad;
         }
 
-        public override string ToString() => $"{Sexo}:{Nombre} ({Edad})";
+        public RangoDeEdad Rango
+        {
+            get =>
+                Edad switch
+                {
+                    _ when Edad < 20 => RangoDeEdad.MuyJoven,
+                    _ when Edad < 30 => RangoDeEdad.Joven,
+                    _ when Edad < 40 => RangoDeEdad.Plenitud,
+                    _ when Edad < 50 => RangoDeEdad.Madurez,
+                    _ => RangoDeEdad.Vejez
+                };
+        }
+
+        public override string ToString() => $"{Sexo}:{Nombre} ({Edad} {Rango})";
     }
 }
