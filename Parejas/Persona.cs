@@ -29,7 +29,7 @@ namespace Parejas
             get =>
                 Edad switch
                 {
-                    _ when Edad < 20 => RangoDeEdad.MuyJoven,
+                    < 20 => RangoDeEdad.MuyJoven,
                     _ when Edad < 30 => RangoDeEdad.Joven,
                     _ when Edad < 40 => RangoDeEdad.Plenitud,
                     _ when Edad < 50 => RangoDeEdad.Madurez,

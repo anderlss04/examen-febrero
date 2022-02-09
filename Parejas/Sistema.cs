@@ -26,6 +26,14 @@ namespace Parejas
             if (System.Math.Abs(a.Edad - b.Edad) > 12) return false;
             if (System.Math.Abs(a.Rango - b.Rango) > 1) return false;
             return true;
+
+            // return (a, b) switch
+            // {
+            //     _ when a.Sexo == b.Sexo => false,
+            //     _ when System.Math.Abs(a.Edad - b.Edad) > 12 => false,
+            //     _ when System.Math.Abs(a.Rango - b.Rango) > 1 => false,
+            //     _ => true
+            // };
         }
 
         public List<(Persona, Persona)> PosibleParejas(List<Persona> personas)
