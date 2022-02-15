@@ -35,9 +35,9 @@ namespace Parejas
         public static IEnumerable<object[]> Data =>
         new List<object[]>
         {
-            new object[] { new Persona("A", Sexo.H, 20) , new Persona("B", Sexo.H, 20), false},
-            new object[] { new Persona("A", Sexo.H, 20) , new Persona("B", Sexo.M, 26), false},
-            new object[] { new Persona("A", Sexo.H, 20) , new Persona("B", Sexo.M, 21), true},
+            new object[] { new Persona() , new Persona(), false},
+            // new object[] { new Persona("A", Sexo.H, 20) , new Persona("B", Sexo.M, 26), false},
+            // new object[] { new Persona("A", Sexo.H, 20) , new Persona("B", Sexo.M, 21), true},
         };
 
     }
