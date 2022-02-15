@@ -3,11 +3,13 @@ Exámen de comprobación de conocimientos sobre pruebas unitarias y TDD
 
 ## Enunciado
 Se te proporcionan dos proyectos `dotnet` para realizar las *Pruebas Unitarias* asociadas a un `Sistema`.  
-Nuestro `Sistema` indica si una `Persona` puede tener descendencia natural con otra `Persona`.
-Siendo una `Persona` un tipo de dato que refleja una persona, y tendrá como propiedades nombre, edad, sexo y rango de edad al que pertenece.
+Nuestro `Sistema` consta de un tipo de datos `Persona`. Con atributos/propiedades como el nombre, la edad, y el sexo, que tendrás que codificar.
+
+El `Sistema` tiene como finalidad indicarnos si una `Persona` puede tener descendencia natural con otra `Persona`.
+
 
 **Objetivo del Sistema**   
-Dos personas pueden tener descendencia si son de distinto sexo, su edad no difiere en más de 12 años, y pertenecen a rangos de edad consecutivos.
+Dos personas pueden tener descendencia si son de distinto sexo, su edad no difiere en más de 12 años, y pertenecen a rangos de edad consecutivos. Modela el `RangoDeEdad` como un atributo o un metodo del tipo Persona.
 
 **Rangos de Edad**:  
 - 0-19 MuyJoven  
